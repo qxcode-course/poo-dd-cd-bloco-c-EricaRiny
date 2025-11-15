@@ -1,0 +1,309 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-15_14-21-48",
+            "content": "@@ -1,107 +0,0 @@\n-class Theater:%0A    %0A    def __init__(self, capacidade:int):%0A        self.__capacidade = capacidade%0A        \n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-11-15_14-49-59",
+            "content": "@@ -3,778 +3,105 @@\n ass \n-Client:%0A    %0A    def __init__(self, id: str, phone: int):%0A        self.__id = id%0A        self.__phone = phone%0A%0Aclass Theater:%0A    %0A    def __init__(self, capacidade:int):%0A        self.__capacidade = capacidade%0A        self.lugares: list%5BClient %7C None%5D = %5B%5D%0A%0A        for i in range(capacidade):%0A            self.lugares.append(None)%0A    %0A    def __str__(self):%0A        %0A        if self.lugares == None:%0A            self.lugares = %22-%22%0A        %0A        return f%22%7Bself.lugares%7D%22%0A    %0Adef main():%0A    theater = Theater(0)%0A    client = Client(%22 %22, 0)%0A    %0A    while True:%0A        linha = input()%0A        args: list%5Bstr%5D = linha.split(%22 %22)%0A        print(%22$%22 + linha)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            theater.show() %0Amain()\n+Theater:%0A    %0A    def __init__(self, capacidade:int):%0A        self.__capacidade = capacidade%0A        \n",
+            "lines": "5"
+        },
+        {
+            "label": "2025-11-15_15-17-59",
+            "content": "@@ -477,49 +477,8 @@\n es%7D%22\n-%0A%0A    def shor(self):%0A        print(self)\n %0A   \n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-11-15_15-18-28",
+            "content": "@@ -486,17 +486,17 @@\n  def sho\n-w\n+r\n (self):%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-15_15-18-46",
+            "content": "@@ -449,20 +449,16 @@\n         \n-    \n return f\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-15_15-19-01",
+            "content": "@@ -417,18 +417,26 @@\n     \n-print(\n+self.lugares = \n %22-%22\n-)\n %0A   \n@@ -433,32 +433,36 @@\n  = %22-%22%0A        %0A\n+    \n         return f\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-15_15-35-42",
+            "content": "@@ -417,18 +417,18 @@\n     \n-return \n+print(\n %22-%22\n+)\n %0A   \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-15_15-36-43",
+            "content": "@@ -437,26 +437,8 @@\n    %0A\n-        else:%0A    \n     \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-15_15-37-19",
+            "content": "@@ -417,32 +417,18 @@\n     \n-self.lugares.append(\n+return \n %22-%22\n-)\n %0A   \n@@ -436,25 +436,35 @@\n     %0A       \n-%0A\n+ else:%0A    \n         retu\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-15_15-39-17",
+            "content": "@@ -438,16 +438,65 @@\n nd(%22-%22)%0A\n+        %0A       %0A        return f%22%7Bself.lugares%7D%22\n %0A%0A    de\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-15_15-39-30",
+            "content": "@@ -443,42 +443,8 @@\n %22)%0A%0A\n-        return f%22%7Bself.lugares%7D%22%0A%0A\n %0A   \n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-15_15-42-46",
+            "content": "@@ -359,25 +359,24 @@\n (self):%0A\n-%0A\n         \n lugares \n@@ -371,45 +371,19 @@\n     \n-lugares = %22, %22.join(%5Bstr(x), for x in\n+%0A        if\n  sel\n@@ -395,48 +395,16 @@\n ares\n-%5D)%0A        %0A        if lugares\n  == \n-%22\n None\n-%22\n :%0A  \n@@ -457,16 +457,21 @@\n turn f%22%7B\n+self.\n lugares%7D\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-15_15-47-02",
+            "content": "@@ -397,17 +397,17 @@\n str(\n-i\n+x\n ), for \n-i\n+x\n  in \n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-15_15-47-34",
+            "content": "@@ -395,16 +395,17 @@\n (%5Bstr(i)\n+,\n  for i i\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-15_15-48-12",
+            "content": "@@ -419,16 +419,92 @@\n ugares%5D)\n+%0A        %0A        if lugares == %22None%22:%0A            self.lugares.append(%22-%22)\n %0A%0A      \n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-15_15-48-29",
+            "content": "@@ -438,17 +438,16 @@\n eturn f%22\n-%5B\n %7Blugares\n@@ -447,17 +447,16 @@\n lugares%7D\n-%5D\n %22%0A%0A%0A    \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-15_15-48-41",
+            "content": "@@ -329,11 +329,12 @@\n end(\n-%22-%22\n+None\n )%0A  \n@@ -421,18 +421,16 @@\n ares%5D)%0A%0A\n-%0A%0A\n         \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-15_15-52-17",
+            "content": "@@ -245,19 +245,20 @@\n lient %7C \n-str\n+None\n %5D = %5B%5D%0A%0A\n@@ -420,16 +420,18 @@\n ares%5D)%0A%0A\n+%0A%0A\n         \n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-15_15-52-55",
+            "content": "@@ -245,20 +245,19 @@\n lient %7C \n-None\n+str\n %5D = %5B%5D%0A%0A\n@@ -324,20 +324,19 @@\n .append(\n-None\n+%22-%22\n )%0A    %0A \n@@ -397,29 +397,8 @@\n r(i)\n-if i != None else %22-%22\n  for\n@@ -419,17 +419,16 @@\n ares%5D)%0A%0A\n-%0A\n         \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-15_15-54-57",
+            "content": "@@ -379,16 +379,17 @@\n ares = %22\n+,\n  %22.join(\n@@ -399,20 +399,15 @@\n r(i)\n- \n if i \n-is not\n+!=\n  Non\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-15_15-56-21",
+            "content": "@@ -392,11 +392,14 @@\n in(%5B\n-%22-%22\n+str(i)\n  if \n@@ -403,16 +403,20 @@\n if i is \n+not \n None els\n@@ -417,22 +417,19 @@\n ne else \n-str(i)\n+%22-%22\n  for i i\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-15_16-08-06",
+            "content": "@@ -269,17 +269,17 @@\n     for \n-_\n+i\n  in rang\n@@ -395,17 +395,17 @@\n %5B%22-%22 if \n-x\n+i\n  is None\n@@ -418,16 +418,16 @@\n str(\n-x\n+i\n ) for \n-x\n+i\n  in \n@@ -441,16 +441,18 @@\n gares%5D)%0A\n+%0A%0A\n         \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-15_16-14-08",
+            "content": "@@ -112,126 +112,8 @@\n hone\n-%0A    %0A    def __str__(self):%0A        return f%22%7Bself.__id%7D:%7Bself.__phone%7D%22%0A    %0A    def show(self):%0A        print(self)\n %0A%0Acl\n@@ -166,24 +166,63 @@\n idade:int):%0A\n+        self.__capacidade = capacidade%0A\n         self\n@@ -529,17 +529,16 @@\n  main():\n- \n %0A    the\n@@ -808,118 +808,9 @@\n ow()\n-%0A        elif args%5B0%5D == %22init%22:%0A            capacidade:int = args%5B1%5D%0A            theater.__init__(capacidade)\n+ \n %0Amai\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-15_16-38-29",
+            "content": "@@ -950,20 +950,15 @@\n t = \n-int(\n args%5B1%5D\n-)\n %0A   \n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-11-15_16-40-55",
+            "content": "@@ -551,16 +551,17 @@\n res%7D%5D%22%0A%0A\n+%0A\n     def \n@@ -595,97 +595,8 @@\n elf)\n-%0A%0A    def reserve(self, cliente:Client, index:int):%0A        self.lugares%5Bindex%5D = cliente\n %0A   \n@@ -645,17 +645,16 @@\n   client\n-e\n  = Clien\n@@ -959,16 +959,16 @@\n rgs%5B1%5D)%0A\n+\n         \n@@ -1004,230 +1004,8 @@\n de)%0A\n-        elif args%5B0%5D == %22reserve%22:%0A            nome:str = args%5B1%5D%0A            phone:int = args%5B2%5D%0A            index: int = int(args%5B3%5D)%0A            cliente= Client(nome, phone)%0A            theater.reserve(cliente, index)%0A%0A\n main\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-11-15_16-58-32",
+            "content": "@@ -646,110 +646,8 @@\n t):%0A\n-        if self.lugares%5Bindex%5D != None:%0A            print(fail: cadeira ja esta ocupada)%0A            %0A\n     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-15_16-59-46",
+            "content": "@@ -700,17 +700,16 @@\n   print(\n-%22\n fail: ca\n@@ -729,19 +729,30 @@\n  ocupada\n-%22\n )%0A\n+            \n %0A       \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-15_16-59-58",
+            "content": "@@ -112,112 +112,8 @@\n hone\n-%0A%0A    def getPhone(self):%0A        return self.__phone%0A    %0A    def getId(self):%0A        return self.__id\n %0A   \n@@ -736,140 +736,8 @@\n da%22)\n-%0A        for i in self.lugares: %0A           if cliente.getId() == i.getId():%0A               print(%22fail: cliente ja esta no cinema%22)\n %0A%0A  \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-15_17-08-19",
+            "content": "@@ -841,32 +841,8 @@\n a%22)%0A\n-            return%0A    %0A\n     \n@@ -887,22 +887,8 @@\n  if \n-i != None and \n clie\n@@ -973,41 +973,8 @@\n a%22)%0A\n-               return%0A           \n %0A   \n@@ -1511,20 +1511,15 @@\n t = \n-int(\n args%5B2%5D\n-)\n %0A   \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-15_17-49-54",
+            "content": "@@ -442,49 +442,8 @@\n = %5B%5D\n-%0A        self.capacidade:int = capacidade\n %0A%0A  \n@@ -864,128 +864,8 @@\n     \n-    if index%3Eself.capacidade or index%3Cself.capacidade:%0A            print(%22fail: cadeira nao existe%22)%0A            return \n %0A   \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-15_17-52-37",
+            "content": "@@ -939,17 +939,31 @@\n r index%3C\n-0\n+self.capacidade\n :%0A      \n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-11-15_17-53-06",
+            "content": "@@ -905,18 +905,16 @@\n         \n-el\n if index\n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-11-15_17-53-28",
+            "content": "@@ -901,24 +901,26 @@\n urn%0A        \n+el\n if index%3Esel\n@@ -931,16 +931,27 @@\n pacidade\n+ or index%3C0\n :%0A      \n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-11-15_17-54-12",
+            "content": "@@ -802,28 +802,34 @@\n  if \n-index%3Eself.capacidad\n+self.lugares%5Bindex%5D != Non\n e:%0A \n@@ -864,18 +864,23 @@\n ira \n-nao existe\n+ja esta ocupada\n %22)%0A \n@@ -896,17 +896,16 @@\n   return\n- \n %0A       \n@@ -909,39 +909,31 @@\n     \n-el\n if \n-self.lugares%5Bindex%5D != Non\n+index%3Eself.capacidad\n e:%0A \n@@ -960,39 +960,34 @@\n il: cadeira \n-ja esta ocupada\n+nao existe\n %22)%0A         \n@@ -987,32 +987,33 @@\n           return\n+ \n %0A        for i i\n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-11-15_17-59-15",
+            "content": "@@ -1220,138 +1220,8 @@\n ente\n-%0A%0A    def cancel(self, id:str):%0A        for i in self.lugares:%0A            if i.getId() == id:%0A                del self.lugares%5Bi%5D\n %0A   \n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-11-15_18-25-22",
+            "content": "@@ -1985,102 +1985,8 @@\n dex)\n-%0A        elif args%5B0%5D == %22cancel%22:%0A            id:str = args%5B1%5D%0A            theater.cancel(id)\n %0A%0Ama\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-11-15_18-26-47",
+            "content": "@@ -1265,30 +1265,12 @@\n or i\n-, pessoa in enumerate(\n+ in \n self\n@@ -1277,17 +1277,16 @@\n .lugares\n-)\n :%0A      \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-31-50",
+            "content": "@@ -1313,22 +1313,17 @@\n      if \n-pessoa\n+i\n .getId()\n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-32-11",
+            "content": "@@ -1320,18 +1320,23 @@\n  pessoa.\n-id\n+getId()\n  == id:%0A\n@@ -1375,33 +1375,16 @@\n %5Bi%5D%0A    \n-            break\n %0Adef mai\n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-33-55",
+            "content": "@@ -1263,23 +1263,22 @@\n  for i, \n-cliente\n+pessoa\n  in enum\n@@ -1313,31 +1313,25 @@\n      if \n-cliente.getId()\n+pessoa.id\n  == id:%0A\n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-34-49",
+            "content": "@@ -1327,16 +1327,18 @@\n te.getId\n+()\n  == id:%0A\n@@ -1370,23 +1370,17 @@\n lugares%5B\n-cliente\n+i\n %5D%0A      \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-37-24",
+            "content": "@@ -1322,17 +1322,20 @@\n cliente.\n-i\n+getI\n d == id:\n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-37-41",
+            "content": "@@ -1318,31 +1318,26 @@\n  if cliente.\n-getId()\n+id\n  == id:%0A    \n@@ -1365,17 +1365,23 @@\n lugares%5B\n-i\n+cliente\n %5D%0A      \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-38-07",
+            "content": "@@ -1370,23 +1370,17 @@\n lugares%5B\n-cliente\n+i\n %5D%0A      \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-38-22",
+            "content": "@@ -1370,17 +1370,23 @@\n lugares%5B\n-i\n+cliente\n %5D%0A      \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-38-52",
+            "content": "@@ -1341,46 +1341,8 @@\n id:%0A\n-                aux = self.lugares%5Bi%5D%0A\n     \n@@ -1393,31 +1393,13 @@\n     \n+b\n re\n-turn aux%0A            \n+ak\n %0Adef\n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-15_18-41-02",
+            "content": "@@ -1833,26 +1833,25 @@\n  theater\n- = Theater\n+.__init__\n (capacid\n",
+            "lines": "83"
+        },
+        {
+            "label": "2025-11-15_18-43-14",
+            "content": "@@ -1442,28 +1442,8 @@\n aux%0A\n-        return None%0A\n     \n",
+            "lines": "83"
+        },
+        {
+            "label": "2025-11-15_18-44-50",
+            "content": "@@ -1248,17 +1248,16 @@\n d:str):%0A\n-%0A\n         \n@@ -1383,32 +1383,36 @@\n                 \n+del \n self.lugares%5Bi%5D \n@@ -1414,15 +1414,8 @@\n s%5Bi%5D\n- = None\n %0A   \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-11-15_18-46-42",
+            "content": "@@ -1248,16 +1248,17 @@\n d:str):%0A\n+%0A\n         \n@@ -1446,84 +1446,8 @@\n aux%0A\n-            else:%0A                print(%22fail: cliente nao esta no cinema%22)%0A\n     \n",
+            "lines": "85"
+        },
+        {
+            "label": "2025-11-15_18-49-35",
+            "content": "@@ -1339,28 +1339,8 @@\n = id\n- and cliente != None\n :%0A  \n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-15_18-50-31",
+            "content": "@@ -1325,42 +1325,42 @@\n ente\n- != None and cliente.getId() == id\n+.getId() == id and cliente != None\n :%0A  \n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-15_18-51-01",
+            "content": "@@ -1465,30 +1465,8 @@\n aux%0A\n-                break%0A\n     \n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-15_18-51-32",
+            "content": "@@ -1442,37 +1442,42 @@\n                 \n-b\n re\n-ak\n+turn aux\n %0A               \n@@ -1473,34 +1473,29 @@\n             \n+b\n re\n-turn aux\n+ak\n %0A           \n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-11-15_18-52-30",
+            "content": "@@ -1248,17 +1248,16 @@\n d:str):%0A\n-%0A\n         \n@@ -1314,16 +1314,36 @@\n      if \n+cliente != None and \n cliente.\n@@ -1448,32 +1448,59 @@\n           break%0A\n+                return aux%0A\n             else\n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-11-15_18-54-26",
+            "content": "@@ -1314,19 +1314,16 @@\n       if\n- i,\n  cliente\n@@ -1338,16 +1338,54 @@\n  == id:%0A\n+                aux = self.lugares%5Bi%5D%0A\n         \n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-11-15_18-55-35",
+            "content": "@@ -1319,27 +1319,10 @@\n  if \n-cliente != None and\n+i,\n  cli\n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-15_18-56-27",
+            "content": "@@ -1495,38 +1495,16 @@\n inema%22)%0A\n-                break%0A\n         \n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-15_18-56-51",
+            "content": "@@ -1517,32 +1517,43 @@\n   break%0A        \n+return None\n %0A            %0Ade\n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-11-15_18-57-45",
+            "content": "@@ -1509,32 +1509,41 @@\n           break%0A\n+        %0A\n             %0Adef\n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-11-15_18-58-24",
+            "content": "class Client:\n    \n    def __init__(self, id: str, phone: int):\n        self.__id = id\n        self.__phone = phone\n\n    def getPhone(self):\n        return self.__phone\n    \n    def getId(self):\n        return self.__id\n    \n    def __str__(self):\n        return f\"{self.__id}:{self.__phone}\"\n    \n    def show(self):\n        print(self)\n\nclass Theater:\n    \n    def __init__(self, capacidade:int):\n        self.lugares: list[Client | None] = []\n        self.capacidade:int = capacidade\n\n        for _ in range(capacidade):\n            self.lugares.append(None)\n    \n    def __str__(self):\n\n        lugares = \" \".join([\"-\" if x is None else str(x) for x in self.lugares])\n        return f\"[{lugares}]\"\n\n    def show(self):\n        print(self)\n\n    def reserve(self, cliente:Client, index:int):\n        if index>self.capacidade:\n            print(\"fail: cadeira nao existe\")\n            return \n        elif self.lugares[index] != None:\n            print(\"fail: cadeira ja esta ocupada\")\n            return\n        for i in self.lugares: \n           if i != None and cliente.getId() == i.getId():\n               print(\"fail: cliente ja esta no cinema\")\n               return\n           \n        self.lugares[index] = cliente\n\n    def cancel(self, id:str):\n\n        for i, cliente in enumerate(self.lugares):\n            if cliente != None and cliente.getId() == id:\n                self.lugares[i] = None\n                break\n            else:\n                print(\"fail: cliente nao esta no cinema\")\n                break\n            \ndef main(): \n    theater = Theater(0)\n    cliente = Client(\" \", 0)\n    \n    while True:\n        linha = input()\n        args: list[str] = linha.split(\" \")\n        print(\"$\" + linha)\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            theater.show()\n        elif args[0] == \"init\":\n            capacidade:int = int(args[1])\n            theater = Theater(capacidade)\n        elif args[0] == \"reserve\":\n            nome:str = args[1]\n            phone:int = int(args[2])\n            index: int = int(args[3])\n            cliente= Client(nome, phone)\n            theater.reserve(cliente, index)\n        elif args[0] == \"cancel\":\n            id:str = args[1]\n            theater.cancel(id)\n\nmain()",
+            "lines": "86"
+        }
+    ]
+}
