@@ -1,0 +1,194 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-19_19-09-39",
+            "content": "@@ -1,719 +0,0 @@\n-class Person:%0A%0A    def __init__(self, name:str):%0A        self.__name:str = name%0A%0A    def __str__(self):%0A        return f%22%7Bself.__name%7D%22%0A    %0Aclass Market:%0A%0A    def __init__(self, counterCount: int):%0A        self.__counters:list%5BPerson%7CNone%5D = %5B%5D%0A        self.__queue:list%5BPerson%7CNone%5D = %5B%5D%0A%0A        for counter in range(counterCount):%0A            self.__counters.append(None)%0A%0Adef main():%0A    person = Person(%22 %22)%0A    market = Market(0)%0A%0A    while True:%0A%0A        linha = input()%0A        arg:list%5Bstr%5D = linha.split(%22 %22)%0A        print(%22$%22 + linha)%0A        %0A        if arg%5B0%5D == %22end%22:%0A            break%0A        elif arg%5B0%5D == %22init%22:%0A            counterCount:int = arg%5B1%5D%0A            market = Market(counterCount)%0Amain()\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-11-19_19-26-50",
+            "content": "@@ -540,16 +540,24 @@\n  linha)%0A\n+        \n %0A       \n@@ -661,19 +661,14 @@\n t = \n-int(\n arg%5B1%5D\n-)\n %0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-11-19_19-27-06",
+            "content": "@@ -374,263 +374,8 @@\n e)%0A%0A\n-    def __str__(self):%0A        counters = %22, %22.join(%5B%22-----%22 if counter is None else str(counter) for counter in self.__counters%5D)%0A        queue = %22, %22.join(%5Bstr(queue) for queue in self.__queue%5D)%0A        return f%22Caixas: %5B%7Bcounters%7D%5D%5CnEspera: %5B%7Bqueue%7D%5D%22%0A\n def \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-11-19_19-35-39",
+            "content": "@@ -629,50 +629,8 @@\n %7D%5D%22%0A\n-%0A    def show(self):%0A        print(self)%0A%0A\n def \n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-19_19-36-40",
+            "content": "@@ -1004,65 +1004,8 @@\n nt)%0A\n-        elif arg%5B0%5D == %22show%22:%0A            market.show()%0A\n main\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-19_19-37-08",
+            "content": "@@ -630,81 +630,8 @@\n %5D%22%0A%0A\n-    def arrive(self, pessoa:Person):%0A        self.__queue.append(pessoa)%0A\n     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-11-19_19-43-01",
+            "content": "@@ -699,17 +699,16 @@\n pessoa)%0A\n-%0A\n     def \n@@ -1134,140 +1134,8 @@\n w()%0A\n-        elif arg%5B0%5D == %22arrive%22:%0A            nome: str = arg%5B1%5D%0A            pessoa = Person(nome)%0A            market.arrive(pessoa)%0A\n main\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-19_19-46-18",
+            "content": "@@ -704,95 +704,8 @@\n a)%0A%0A\n-    def call(self, index:int):%0A        self.__counters.insert(0, self.__queue.pop(0))%0A%0A\n     \n@@ -1267,106 +1267,8 @@\n oa)%0A\n-        elif arg%5B0%5D == %22call%22:%0A            index:int = int(arg%5B1%5D)%0A            market.call(index)%0A\n main\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-11-19_19-50-40",
+            "content": "@@ -782,14 +782,11 @@\n eue.\n-remove\n+pop\n (0))\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-19_19-51-22",
+            "content": "@@ -762,17 +762,17 @@\n .insert(\n-1\n+0\n , self._\n@@ -782,11 +782,14 @@\n eue.\n-pop\n+remove\n (0))\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-19_19-52-14",
+            "content": "@@ -762,17 +762,17 @@\n .insert(\n-0\n+1\n , self._\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-19_19-56-24",
+            "content": "@@ -754,21 +754,26 @@\n counters\n-%5B0%5D =\n+.insert(0,\n  self.__\n@@ -781,16 +781,17 @@\n ueue\n-%5Bindex%5D \n+.pop(0))%0A\n %0A   \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-19_20-00-00",
+            "content": "@@ -783,43 +783,8 @@\n dex%5D\n-%0A        self.__queue%5Bindex%5D = None\n  %0A  \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-19_20-01-02",
+            "content": "@@ -809,18 +809,22 @@\n index%5D =\n-%5B%5D\n+ None \n %0A    def\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-19_20-01-15",
+            "content": "@@ -792,12 +792,8 @@\n     \n-del \n self\n@@ -804,15 +804,19 @@\n ueue\n-.pop(0)\n+%5Bindex%5D =%5B%5D\n %0A   \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-19_20-02-59",
+            "content": "@@ -780,32 +780,36 @@\n %5Bindex%5D%0A        \n+del \n self.__queue.pop\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-19_20-03-12",
+            "content": "@@ -811,86 +811,8 @@\n p(0)\n-%0A%0A    def finish(self, index:int):%0A        self.__counters.pop(index)%0A        \n %0A   \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-19_20-07-23",
+            "content": "@@ -1551,110 +1551,8 @@\n ex)%0A\n-        elif arg%5B0%5D == %22finish%22:%0A            index:int = int(arg%5B1%5D)%0A            market.finish(index)%0A\n main\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-19_20-08-46",
+            "content": "@@ -869,22 +869,19 @@\n ters\n-%5Bindex%5D = None\n+.pop(index)\n %0A   \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-11-19_20-10-33",
+            "content": "@@ -735,111 +735,8 @@\n t):%0A\n-        if self.__counters%5Bindex%5D != None:%0A            print(%22fail:caixa ocupado%22)%0A            return %0A\n     \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-11-19_20-13-52",
+            "content": "@@ -798,17 +798,16 @@\n t(%22fail:\n- \n caixa oc\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-19_20-14-04",
+            "content": "@@ -847,21 +847,8 @@\n     \n-for caixa in \n self\n@@ -862,61 +862,11 @@\n ters\n-:%0A            if caixa == None:%0A                caixa\n+%5B0%5D\n  = s\n@@ -884,24 +884,16 @@\n %5Bindex%5D%0A\n-        \n         \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-19_20-19-43",
+            "content": "@@ -842,24 +842,29 @@\n %0A       \n-%0A       \n+ for caixa in\n  self.__\n@@ -871,19 +871,69 @@\n counters\n-%5B0%5D\n+:%0A            if caixa == None:%0A                caixa\n  = self.\n@@ -947,16 +947,24 @@\n %5Bindex%5D%0A\n+        \n         \n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-19_20-21-46",
+            "content": "@@ -863,29 +863,25 @@\n .__counters%5B\n-index\n+0\n %5D = self.__q\n@@ -885,17 +885,21 @@\n __queue%5B\n-0\n+index\n %5D%0A      \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-19_20-23-00",
+            "content": "@@ -839,103 +839,8 @@\n rn %0A\n-        elif self.__counter == %5B%5D:%0A            print(%22fail: sem clientes%22)%0A            return %0A\n     \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-19_20-24-00",
+            "content": "@@ -866,20 +866,18 @@\n nter == \n-None\n+%5B%5D\n :%0A      \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_20-24-08",
+            "content": "@@ -866,18 +866,20 @@\n nter == \n-%5B%5D\n+None\n :%0A      \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_20-25-47",
+            "content": "@@ -862,17 +862,16 @@\n _counter\n-s\n  == %5B%5D:%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_20-26-05",
+            "content": "@@ -867,20 +867,18 @@\n ters == \n-None\n+%5B%5D\n :%0A      \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_20-26-39",
+            "content": "@@ -852,12 +852,8 @@\n lif \n-not \n self\n@@ -863,16 +863,24 @@\n counters\n+ == None\n :%0A      \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_20-27-27",
+            "content": "@@ -843,16 +843,18 @@\n         \n+el\n if not s\n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_20-28-13",
+            "content": "@@ -857,21 +857,24 @@\n  self.__\n-queue\n+counters\n :%0A      \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_20-29-32",
+            "content": "@@ -196,55 +196,8 @@\n t):%0A\n-        self.__counterCount:int = counterCount%0A\n     \n@@ -1047,199 +1047,8 @@\n t):%0A\n-        if index %3E self.__counterCount:%0A            print(%22fail: caixa inexistente%22)%0A            return %0A        if self.__counterCount%5Bindex%5D == None:%0A            print(%22fail: caixa vazio%22)%0A\n     \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_20-33-10",
+            "content": "@@ -1212,33 +1212,37 @@\n f self.__counter\n-s\n+Count\n %5Bindex%5D == None:\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-11-19_20-34-18",
+            "content": "@@ -1281,27 +1281,8 @@\n o%22)%0A\n-            return%0A\n     \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-11-19_20-35-59",
+            "content": "@@ -1203,18 +1203,16 @@\n         \n-el\n if self.\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-19_20-36-46",
+            "content": "@@ -1108,17 +1108,16 @@\n  index %3E\n-=\n  self.__\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-19_20-38-08",
+            "content": "class Person:\n\n    def __init__(self, name:str):\n        self.__name:str = name\n\n    def __str__(self):\n        return f\"{self.__name}\"\n    \nclass Market:\n\n    def __init__(self, counterCount: int):\n        self.__counterCount:int = counterCount\n        self.__counters:list[Person|None] = []\n        self.__queue:list[Person|None] = []\n\n        for counter in range(counterCount):\n            self.__counters.append(None)\n\n    def __str__(self):\n        counters = \", \".join([\"-----\" if counter is None else str(counter) for counter in self.__counters])\n        queue = \", \".join([str(queue) for queue in self.__queue])\n        return f\"Caixas: [{counters}]\\nEspera: [{queue}]\"\n\n    def arrive(self, pessoa:Person):\n        self.__queue.append(pessoa)\n\n    def call(self, index:int):\n        if self.__counters[index] != None:\n            print(\"fail: caixa ocupado\")\n            return \n        if not self.__queue:\n            print(\"fail: sem clientes\")\n            return \n       \n        self.__counters[index] = self.__queue[0]\n        self.__queue.pop(0)\n\n    def finish(self, index:int):\n        if index >= self.__counterCount:\n            print(\"fail: caixa inexistente\")\n            return \n        elif self.__counters[index] == None:\n            print(\"fail: caixa vazio\")\n            return\n        self.__counters[index] = None\n        \n    def show(self):\n        print(self)\n\ndef main():\n    person = Person(\" \")\n    market = Market(0)\n\n    while True:\n\n        linha = input()\n        arg:list[str] = linha.split(\" \")\n        print(\"$\" + linha)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"init\":\n            counterCount:int = int(arg[1])\n            market = Market(counterCount)\n        elif arg[0] == \"show\":\n            market.show()\n        elif arg[0] == \"arrive\":\n            nome: str = arg[1]\n            pessoa = Person(nome)\n            market.arrive(pessoa)\n        elif arg[0] == \"call\":\n            index:int = int(arg[1])\n            market.call(index)\n        elif arg[0] == \"finish\":\n            index:int = int(arg[1])\n            market.finish(index)\nmain()",
+            "lines": "77"
+        }
+    ]
+}
