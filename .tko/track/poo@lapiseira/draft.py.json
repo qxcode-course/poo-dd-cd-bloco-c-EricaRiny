@@ -1,0 +1,399 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-17_15-51-34",
+            "content": "@@ -1,373 +0,0 @@\n-class Lead:%0A%0A    def __init__(self, calibre: int, dureza:str, tamanho: int):%0A        self.__calibre: int = calibre%0A        self.__dureza: str = dureza%0A        self.__tamanho: int = tamanho%0A        %0Aclass Pencil:%0A%0A    def __init__(self, calibre: int):%0A        self.__calibre:int = calibre%0A        self.__bico:str = Lead %7C None%0A        self.__tambor: list%5BLead%5D = %5B%5D%0A        \n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-11-17_22-20-26",
+            "content": "@@ -362,349 +362,12 @@\n  %5B%5D%0A\n-%0A    def __str__(self):%0A        return f%22calibre: %7Bself.__calibre%7D, bico: %7Bself.bico%7D, %22%0A%0Adef main():%0A    lead = Lead(0,%22 %22, 0)%0A    pencil = Pencil(0)%0A%0A    while True:%0A        linha = input()%0A        arg:list%5Bstr%5D = linha.split(%22 %22)%0A        print(%22$%22 + linha)%0A%0A        if arg%5B0%5D == %22end%22:%0A            break%0A        elif arg%5B0%5D == %22show%22:%0A%0Amain()\n+        \n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-11-17_22-27-16",
+            "content": "@@ -432,17 +432,16 @@\n , bico: \n-%5B\n %7Bself.bi\n@@ -447,34 +447,10 @@\n ico%7D\n-%5D\n , \n-tambor: %7Bself.__tambor%7D\n %22%0A%0Ad\n@@ -700,33 +700,8 @@\n w%22:%0A\n-            pencil.show()\n %0Amai\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-17_22-28-53",
+            "content": "@@ -477,57 +477,8 @@\n %7D%22%0A%0A\n-    def show(self):%0A        print(self)%0A        %0A\n def \n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-17_22-29-22",
+            "content": "@@ -435,26 +435,24 @@\n ico: %5B%7Bself.\n-__\n bico%7D%5D, tamb\n@@ -513,16 +513,24 @@\n t(self)%0A\n+        \n %0Adef mai\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-17_22-30-25",
+            "content": "@@ -305,21 +305,20 @@\n ico:\n+str = \n Lead %7C\n- None =\n  Non\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-17_22-31-34",
+            "content": "@@ -386,49 +386,8 @@\n lf):\n-%0A%0A        calibre = %22 %22.join(%5B%22 %22 if x %5D)\n %0A   \n@@ -795,114 +795,8 @@\n w()%0A\n-        elif arg%5B0%5D == %22init%22:%0A            calibre:int = int(arg%5B1%5D)%0A            pencil = Pencil(calibre)%0A\n main\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-17_22-45-34",
+            "content": "@@ -378,24 +378,65 @@\n str__(self):\n+%0A%0A        calibre = %22 %22.join(%5B%22 %22 if x %5D)\n %0A        ret\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-17_22-45-45",
+            "content": "@@ -94,20 +94,18 @@\n alibre: \n-floa\n+in\n t = cali\n@@ -263,28 +263,26 @@\n f.__calibre:\n-floa\n+in\n t = calibre%0A\n@@ -846,20 +846,16 @@\n bre:\n-float = floa\n+int = in\n t(ar\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-17_22-46-31",
+            "content": "@@ -391,65 +391,8 @@\n f):%0A\n-        calibre = %22 %22.join(%5B%22 %22if self.calibre is None%5D)%0A\n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-17_22-50-41",
+            "content": "@@ -399,62 +399,47 @@\n     \n-if self.__calibre == None:%0A           \n+calibre = %22 %22.join(%5B%22 %22if\n  self.\n-__\n calibre \n = %22 \n@@ -438,26 +438,17 @@\n bre \n-= %22 %22%0A            \n+is None%5D)\n %0A   \n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-17_22-53-41",
+            "content": "@@ -434,23 +434,36 @@\n         \n-return \n+self.__calibre = %22 %22\n %0A       \n@@ -467,18 +467,13 @@\n     \n-else:%0A\n     \n+%0A\n     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-17_22-54-10",
+            "content": "@@ -441,19 +441,16 @@\n  return \n-%22 %22\n %0A       \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-17_22-54-38",
+            "content": "@@ -405,20 +405,23 @@\n  self.__\n-bico\n+calibre\n  == None\n@@ -438,18 +438,18 @@\n     \n-print(\n+return \n %22 %22\n-)\n %0A   \n@@ -453,17 +453,26 @@\n         \n-%0A\n+else:%0A    \n         \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-17_23-13-04",
+            "content": "@@ -435,18 +435,18 @@\n     \n-return \n+print(\n %22 %22\n+)\n %0A   \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-17_23-13-27",
+            "content": "@@ -435,19 +435,14 @@\n     \n-self.bico =\n+return\n  %22 %22\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-17_23-13-52",
+            "content": "@@ -432,26 +432,24 @@\n        self.\n-__\n bico = %22 %22%0A \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-17_23-14-10",
+            "content": "@@ -446,16 +446,17 @@\n bico = %22\n+ \n %22%0A      \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-17_23-14-20",
+            "content": "@@ -360,23 +360,14 @@\n Lead\n- %7C None%5D = None\n+%5D = %5B%5D\n %0A%0A  \n@@ -390,46 +390,8 @@\n lf):\n-%0A%0A        tambor = %22 %22.join(%5Bstr(x) %5D)\n %0A   \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-18_16-53-13",
+            "content": "@@ -396,24 +396,25 @@\n (self):%0A\n+%0A\n         \n %0A       \n@@ -397,32 +397,121 @@\n self):%0A%0A        \n+tambor = %22 %22.join(%5Bstr(x) %5D)%0A        if self.__bico == None:%0A            self.__bico = %22%22\n %0A        %0A      \n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-18_16-55-16",
+            "content": "@@ -417,70 +417,8 @@\n     \n-tambor = %22%3C%22 + %22 %22.join(%5Bstr(x) for x in self.__tambor%5D) + %22%3E%22\n %0A   \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-18_23-14-57",
+            "content": "@@ -371,10 +371,12 @@\n %5D = \n-%5B%5D\n+None\n %0A%0A  \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-18_23-16-42",
+            "content": "@@ -406,67 +406,8 @@\n     \n-bico = str(self.__bico) if self.__bico is not None else %22 %22\n %0A   \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-18_23-18-40",
+            "content": "@@ -585,16 +585,23 @@\n bico: %5B%7B\n+self.__\n bico%7D%5D, \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-18_23-19-00",
+            "content": "@@ -459,16 +459,17 @@\n e else %22\n+ \n %22%0A      \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-18_23-19-10",
+            "content": "@@ -601,16 +601,23 @@\n ambor: %7B\n+self.__\n tambor%7D%22\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-18_23-20-38",
+            "content": "@@ -656,132 +656,8 @@\n f)%0A%0A\n-    def insert(self, calibre:float):%0A        if calibre != self.__calibre:%0A            print(%22fail: calibre incompat%C3%ADvel%22)%0A%0A\n def \n@@ -1040,114 +1040,8 @@\n re)%0A\n-        elif arg%5B0%5D == %22insert%22:%0A            calibre:int = int(arg%5B1%5D)%0A            pencil.insert(calibre)%0A\n main\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-18_23-25-31",
+            "content": "@@ -1209,36 +1209,32 @@\n     calibre:\n-float = floa\n+int = in\n t(arg%5B1%5D)%0A  \n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-11-18_23-25-58",
+            "content": "@@ -375,69 +375,8 @@\n %5B%5D%0A%0A\n-    def getCalibre(self):%0A        return self.__calibre%0A    %0A\n     \n@@ -677,17 +677,21 @@\n lf, \n-lead:Lead\n+calibre:float\n ):%0A \n@@ -704,25 +704,15 @@\n  if \n-lead.getC\n+c\n alibre\n-()\n  != \n@@ -1239,123 +1239,8 @@\n 1%5D)%0A\n-            dureza:str = arg%5B2%5D%0A            tamanho:int = arg%5B3%5D%0A            lead = Lead(calibre, dureza, tamanho)%0A\n     \n@@ -1261,20 +1261,23 @@\n .insert(\n-lead\n+calibre\n )%0Amain()\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-11-18_23-32-36",
+            "content": "@@ -38,20 +38,18 @@\n alibre: \n-floa\n+in\n t, durez\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-18_23-33-05",
+            "content": "@@ -199,69 +199,8 @@\n    %0A\n-    def getCalibre(self):%0A        return self.__calibre%0A    %0A\n clas\n@@ -373,16 +373,72 @@\n %5D = %5B%5D%0A%0A\n+    def getCalibre(self):%0A        return self.__calibre%0A\n     %0A   \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-18_23-34-05",
+            "content": "@@ -434,16 +434,20 @@\n %5D = %5B%5D%0A%0A\n+    \n %0A    def\n@@ -852,61 +852,8 @@\n el%22)\n-%0A        else:%0A            self.__tambor.append(lead)\n %0A%0Ade\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-18_23-36-34",
+            "content": "@@ -260,104 +260,8 @@\n    %0A\n-    def __str__(self):%0A        return f%22%7Bself.__calibre%7D:%7Bself.__dureza%7D:%7Bself.__tamanho%7D%22%0A    %0A\n clas\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-18_23-45-35",
+            "content": "@@ -573,12 +573,12 @@\n o = \n-f%22%5B%7B\n+str(\n self\n@@ -588,11 +588,9 @@\n bico\n-%7D%5D%22\n+)\n  if \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-18_23-58-33",
+            "content": "@@ -569,20 +569,20 @@\n  bico = \n-str(\n+f%22%5B%7B\n self.__b\n@@ -584,17 +584,19 @@\n f.__bico\n-)\n+%7D%5D%22\n  if self\n@@ -660,21 +660,14 @@\n in(%5B\n-f%22%5B%7B\n str(x)\n-%7D%5D%22\n  for\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_00-00-48",
+            "content": "@@ -645,16 +645,17 @@\n  %22%3C%22 + %22\n+ \n %22.join(%5B\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_00-01-23",
+            "content": "@@ -645,17 +645,16 @@\n  %22%3C%22 + %22\n- \n %22.join(%5B\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_00-01-56",
+            "content": "@@ -645,16 +645,17 @@\n  %22%3C%22 + %22\n+ \n %22.join(%5B\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_00-02-18",
+            "content": "@@ -965,51 +965,8 @@\n se:%0A\n-            self.__bico = self.__tambor%5B0%5D%0A\n     \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_00-05-31",
+            "content": "@@ -1001,17 +1001,17 @@\n _tambor%5B\n-1\n+0\n %5D%0A      \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-11-19_00-05-49",
+            "content": "@@ -1004,16 +1004,10 @@\n mbor\n-.index%5B0\n+%5B1\n %5D%0A  \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-11-19_00-06-20",
+            "content": "@@ -961,16 +961,65 @@\n   else:%0A\n+            self.__bico = self.__tambor.index%5B0%5D%0A\n         \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-11-19_00-09-14",
+            "content": "@@ -1005,170 +1005,8 @@\n d)%0A%0A\n-    def pull(self):%0A        if self.__bico != None:%0A            return%0A        else:%0A            self.__bico = self.__tambor%5B0%5D%0A            self.__tambor.pop(0)%0A%0A\n def \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_00-16-07",
+            "content": "@@ -1013,32 +1013,97 @@\n def pull(self):%0A\n+        if self.__bico != None:%0A            return%0A        else:%0A\n             self\n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-11-19_00-24-09",
+            "content": "@@ -1046,16 +1046,45 @@\n __bico =\n+ self.__tambor%5B0%5D%0A           \n  self.__\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-19_00-26-47",
+            "content": "@@ -1068,38 +1068,8 @@\n .pop\n-%0A            self.__tambor.pop\n (0)%0A\n@@ -1679,65 +1679,8 @@\n ad)%0A\n-        elif arg%5B0%5D == %22pull%22:%0A            pencil.pull()%0A\n main\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-19_00-27-45",
+            "content": "@@ -1060,19 +1060,20 @@\n __tambor\n-%5B0%5D\n+.pop\n %0A       \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-19_00-28-11",
+            "content": "@@ -1025,125 +1025,8 @@\n f):%0A\n-            if self.__bico != None:%0A                print(%22fail: j%C3%A1 existe grafite no bico%22)%0A                return %0A\n     \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-19_00-29-36",
+            "content": "@@ -1087,17 +1087,17 @@\n %22fail: j\n-a\n+%C3%A1\n  existe \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-19_00-29-52",
+            "content": "@@ -1219,58 +1219,8 @@\n 0)%0A%0A\n-    def remove(self):%0A        self.__bico = None%0A%0A\n def \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-19_00-30-54",
+            "content": "@@ -1932,69 +1932,8 @@\n l()%0A\n-        elif arg%5B0%5D == %22remove%22:%0A            pencil.remove()%0A\n main\n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_00-31-30",
+            "content": "@@ -1269,116 +1269,8 @@\n ne%0A%0A\n-    def write(self):%0A        if self.__bico == None:%0A            print(%22fail: nao existe grafite no bico%22)%0A%0A\n def \n@@ -1993,67 +1993,8 @@\n e()%0A\n-        elif arg%5B0%5D == %22write%22:%0A            pencil.write()%0A\n main\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-11-19_00-33-31",
+            "content": "@@ -260,67 +260,8 @@\n    %0A\n-    def getDureza(self):%0A        return self.__dureza%0A    %0A\n     \n@@ -356,299 +356,8 @@\n    %0A\n-    def usePS(self):%0A        if self.__dureza == %22HB%22:%0A            self.__tamanho -= 1%0A        elif self.__dureza == %222B%22:%0A            self.__tamanho -= 2%0A        elif self.__dureza == %224B%22:%0A            self.__tamanho -=4%0A        elif self.__dureza == %226B%22:%0A            self.__tamanho -= 6%0A%0A\n clas\n@@ -818,17 +818,16 @@\n (self)%0A%0A\n-%0A\n     def \n@@ -1375,54 +1375,8 @@\n co%22)\n-%0A        else:%0A            self.__bico.usePS()\n %0A%0Ade\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-11-19_00-43-19",
+            "content": "@@ -631,17 +631,16 @@\n manho -=\n- \n 4%0A      \n",
+            "lines": "94"
+        },
+        {
+            "label": "2025-11-19_00-44-54",
+            "content": "@@ -2292,19 +2292,14 @@\n t = \n-int(\n arg%5B3%5D\n-)\n %0A   \n",
+            "lines": "94"
+        },
+        {
+            "label": "2025-11-19_00-52-58",
+            "content": "@@ -447,116 +447,8 @@\n  if \n-self.__tamanho%3C10:%0A            print(%22fail: folha incompleta%22)%0A            self.__tamanho = 10%0A        elif \n self\n@@ -701,25 +701,16 @@\n nho -= 6\n-%0A        \n %0A%0Aclass \n@@ -1728,38 +1728,8 @@\n o%22)%0A\n-        %0A        elif self.__%0A\n     \n",
+            "lines": "94"
+        },
+        {
+            "label": "2025-11-19_00-57-26",
+            "content": "@@ -1833,32 +1833,62 @@\n afite no bico%22)%0A\n+        %0A        elif self.__%0A\n         else:%0A  \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-11-19_00-57-45",
+            "content": "@@ -439,24 +439,132 @@\n %0A        if \n+self.__tamanho%3C10:%0A            print(%22fail: folha incompleta%22)%0A            self.__tamanho = 10%0A        elif \n self.__durez\n@@ -822,114 +822,8 @@\n     \n-%0A        if self.__tamanho%3C10:%0A            print(%22fail: folha incompleta%22)%0A            self.__tamanho = 10\n %0A%0Acl\n",
+            "lines": "98"
+        },
+        {
+            "label": "2025-11-19_01-00-14",
+            "content": "@@ -820,85 +820,8 @@\n = 10\n-%0A        if self.__tamanho == 10:%0A            print(%22fail: folha incompleta%22)\n %0A%0Acl\n",
+            "lines": "98"
+        },
+        {
+            "label": "2025-11-19_01-01-31",
+            "content": "@@ -817,34 +817,32 @@\n ho = 10%0A        \n-el\n if self.__tamanh\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-11-19_01-01-50",
+            "content": "@@ -881,28 +881,24 @@\n il: \n-tamanho insuficiente\n+folha incompleta\n %22)%0A%0A\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-11-19_01-02-36",
+            "content": "@@ -845,17 +845,18 @@\n tamanho \n-%3C\n+==\n  10:%0A   \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-11-19_01-03-39",
+            "content": "@@ -846,17 +846,16 @@\n amanho %3C\n-=\n  10:%0A   \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-11-19_01-04-12",
+            "content": "@@ -846,16 +846,17 @@\n amanho %3C\n+=\n  10:%0A   \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-11-19_01-04-20",
+            "content": "@@ -845,18 +845,17 @@\n tamanho \n-==\n+%3C\n  10:%0A   \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-11-19_01-11-14",
+            "content": "@@ -737,17 +737,16 @@\n tamanho%3C\n-=\n 10:%0A    \n@@ -825,16 +825,90 @@\n         \n+elif self.__tamanho == 10:%0A            print(%22fail: tamanho insuficiente%22)\n %0A%0Aclass \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-11-19_01-12-28",
+            "content": "@@ -737,16 +737,17 @@\n tamanho%3C\n+=\n 10:%0A    \n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-19_01-13-00",
+            "content": "@@ -821,70 +821,8 @@\n  10%0A\n-        else:%0A            print(%22fail: tamanho insuficiente%22)%0A\n     \n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-19_01-13-47",
+            "content": "@@ -436,90 +436,8 @@\n f):%0A\n-        if self.__tamanho == 10:%0A            print(%22fail: tamanho insuficiente%22)%0A%0A\n     \n@@ -817,32 +817,85 @@\n ho = 10%0A        \n+else:%0A            print(%22fail: tamanho insuficiente%22)\n %0A        %0A%0Aclass\n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-19_01-15-38",
+            "content": "@@ -793,34 +793,32 @@\n        %0A        \n-el\n if self.__tamanh\n",
+            "lines": "103"
+        },
+        {
+            "label": "2025-11-19_01-16-17",
+            "content": "@@ -518,129 +518,8 @@\n %22)%0A%0A\n-        elif self.__tamanho%3C10:%0A            print(%22fail: folha incompleta%22)%0A            self.__tamanho = 10%0A            %0A\n     \n@@ -785,32 +785,140 @@\n o -= 6%0A        %0A\n+        elif self.__tamanho%3C10:%0A            print(%22fail: folha incompleta%22)%0A            self.__tamanho = 10%0A\n         %0A       \n",
+            "lines": "103"
+        },
+        {
+            "label": "2025-11-19_01-17-13",
+            "content": "@@ -514,16 +514,137 @@\n ente%22)%0A%0A\n+        elif self.__tamanho%3C10:%0A            print(%22fail: folha incompleta%22)%0A            self.__tamanho = 10%0A            %0A\n         \n@@ -914,21 +914,16 @@\n        %0A\n-    %0A\n         \n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-11-19_01-18-04",
+            "content": "@@ -319,69 +319,8 @@\n    %0A\n-    def getTamanho(self):%0A        return self.__tamanho%0A    %0A\n     \n@@ -424,32 +424,114 @@\n ef usePS(self):%0A\n+        if self.__tamanho == 10:%0A            print(%22fail: tamanho insuficiente%22)%0A%0A\n         if self.\n@@ -789,25 +789,24 @@\n  6%0A        %0A\n-%0A\n     %0A       \n@@ -1841,224 +1841,8 @@\n co%22)\n-%0A%0A        elif self.__bico.getTamanho() %3E 10:%0A            self.__bico.usePS()%0A%0A        elif self.__bico.getTamanho %3C= 10:%0A            print(%22fail: folha incompleta%22)%0A            self.__bico = None%0A%0A        %0A%0A        \n %0A   \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-19_01-44-18",
+            "content": "@@ -775,107 +775,32 @@\n     \n-if self.__tamanho %3C 10:%0A \n+%0A%0A\n     \n+%0A\n        \n-self.__tamanho = 10%0A            print(%22fail: folha incompleta%22)\n+ %0A        \n %0A%0Acl\n@@ -2014,24 +2014,25 @@\n  = None%0A\n+%0A\n         \n     %0A   \n@@ -2019,24 +2019,30 @@\n ne%0A%0A        \n+%0A%0A    \n     %0A       \n",
+            "lines": "113"
+        },
+        {
+            "label": "2025-11-19_01-46-42",
+            "content": "@@ -2006,18 +2006,16 @@\n tTamanho\n-()\n  %3C= 10:%0A\n@@ -2085,24 +2085,36 @@\n bico = None%0A\n+            \n %0A        els\n",
+            "lines": "108"
+        },
+        {
+            "label": "2025-11-19_01-47-04",
+            "content": "@@ -2091,28 +2091,62 @@\n  = None%0A\n-            \n+%0A        else:%0A            self.__bico.usePS()\n %0A%0Adef ma\n",
+            "lines": "108"
+        },
+        {
+            "label": "2025-11-19_01-48-10",
+            "content": "@@ -856,28 +856,24 @@\n il: \n-tamanho insuficiente\n+folha incompleta\n %22)%0A%0A\n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-11-19_02-02-51",
+            "content": "@@ -856,24 +856,28 @@\n il: \n-folha incompleta\n+tamanho insuficiente\n %22)%0A%0A\n@@ -2045,36 +2045,32 @@\n (%22fail: \n-tamanho insuficiente\n+folha incompleta\n %22)%0A     \n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-11-19_02-07-21",
+            "content": "class Lead:\n\n    def __init__(self, calibre: float, dureza:str, tamanho: int):\n        self.__calibre: float = calibre\n        self.__dureza: str = dureza\n        self.__tamanho: int = tamanho\n        \n    def getCalibre(self):\n        return self.__calibre\n    \n    def getDureza(self):\n        return self.__dureza\n    \n    def getTamanho(self):\n        return self.__tamanho\n    \n    def __str__(self):\n        return f\"{self.__calibre}:{self.__dureza}:{self.__tamanho}\"\n    \n    def usePS(self):\n        if self.__dureza == \"HB\":\n            self.__tamanho -= 1\n        elif self.__dureza == \"2B\":\n            self.__tamanho -= 2\n        elif self.__dureza == \"4B\":\n            self.__tamanho -= 4\n        elif self.__dureza == \"6B\":\n            self.__tamanho -= 6\n        if self.__tamanho < 10:\n            self.__tamanho = 10\n            print(\"fail: folha incompleta\")\n\nclass Pencil:\n\n    def __init__(self, calibre: int):\n        self.__calibre:float = calibre\n        self.__bico:Lead | None = None\n        self.__tambor: list[Lead | None] = []\n\n\n    def __str__(self):\n        bico = str(self.__bico) if self.__bico is not None else \"\"\n        tambor = \"<\" + \"\".join([f\"[{str(x)}]\" for x in self.__tambor]) + \">\"\n        return f\"calibre: {self.__calibre}, bico: [{bico}], tambor: {tambor}\"\n\n    def show(self):\n        print(self)\n\n\n    def insert(self, lead:Lead):\n        if lead.getCalibre() != self.__calibre:\n            print(\"fail: calibre incompat\u00edvel\")\n        else:\n            self.__tambor.append(lead)\n\n    def pull(self):\n            if self.__bico != None:\n                print(\"fail: ja existe grafite no bico\")\n                return \n            self.__bico = self.__tambor[0]\n            self.__tambor.pop(0)\n\n    def remove(self):\n        self.__bico = None\n\n    def write(self):\n        if self.__bico == None:\n            print(\"fail: nao existe grafite no bico\")\n\n        elif self.__bico.getTamanho() > 10:\n            self.__bico.usePS()\n\n        elif self.__bico.getTamanho() <= 10:\n            print(\"fail: tamanho insuficiente\")\n            self.__bico = None\n            \n\ndef main():\n    lead = Lead(0,\" \", 0)\n    pencil = Pencil(0)\n\n    while True:\n        linha = input()\n        arg:list[str] = linha.split(\" \")\n        print(\"$\" + linha)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"show\":\n            pencil.show()\n        elif arg[0] == \"init\":\n            calibre:float = float(arg[1])\n            pencil = Pencil(calibre)\n        elif arg[0] == \"insert\":\n            calibre:float = float(arg[1])\n            dureza:str = arg[2]\n            tamanho:int = int(arg[3])\n            lead = Lead(calibre, dureza, tamanho)\n            pencil.insert(lead)\n        elif arg[0] == \"pull\":\n            pencil.pull()\n        elif arg[0] == \"remove\":\n            pencil.remove()\n        elif arg[0] == \"write\":\n            pencil.write()\nmain()",
+            "lines": "106"
+        }
+    ]
+}
