@@ -1,0 +1,229 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-19_17-16-24",
+            "content": "@@ -1,703 +0,0 @@\n-class Kid:%0A%0A    def init(self, name:str, age: int):%0A        self.__name: str = name%0A        self.__age: int = age%0A%0A    def __str__(self):%0A        return f%22%7Bself.__name%7D:%7Bself.__age%7D%22%0A    %0A    def getName(self):%0A        return self.__name%0A    %0A    def getAge(self):%0A        return self.__age%0A    %0Aclass Trampoline:%0A%0A    def __init__(self):%0A        self.__playing:list%5BKid%7CNone%5D = %5B%5D%0A        self.__waiting:list%5BKid%7CNone%5D = %5B%5D%0A%0A    def __str__(self):%0A        %0A%0A%0A%0A%0Adef main():%0A    kid = Kid(%22 %22, 0)%0A    trampoline = Trampoline()%0A%0A    while True:%0A        linha = input()%0A        arg:list%5Bstr%5D = linha.split(%22 %22)%0A        print(%22$%22 + linha)%0A%0A        if arg%5B0%5D == %22end%22:%0A            break%0A        %0A%0A    %0Amain()\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-11-19_17-33-03",
+            "content": "@@ -454,207 +454,11 @@\n     \n-esperando = %22 %22.join(%5Bstr(x) for x in self.__waiting%5D)%0A        pulando = %22 %22.join(%5Bstr(x) for x in self.__playing%5D)%0A        return f%22%7Besperando%7D =%3E %7Bpulando%7D%22%0A%0A    def show(self):%0A        print(self)\n+%0A%0A%0A\n %0A%0Ade\n@@ -679,69 +679,8 @@\n eak%0A\n-        elif arg%5B0%5D == %22show%22:%0A            trampoline.show()%0A\n     \n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-19_17-42-01",
+            "content": "@@ -9,32 +9,28 @@\n d:%0A%0A    def \n-__\n init\n-__\n (self, name:\n@@ -612,83 +612,8 @@\n do%7D%22\n-%0A    %0A    def arrive(self, kid: Kid):%0A        self.__waiting.insert(0, kid)\n %0A%0A  \n@@ -944,164 +944,8 @@\n     \n-elif arg%5B0%5D == %22arrive%22:%0A            name:str = arg%5B1%5D%0A            age:int = int(arg%5B2%5D)%0A            kid = Kid(name, age)%0A            trampoline.arrive(kid)\n %0A%0A  \n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-11-19_17-50-21",
+            "content": "@@ -467,18 +467,16 @@\n ando = %22\n-%5B%22\n  %22.join(\n@@ -504,31 +504,24 @@\n .__waiting%5D)\n-%22 + %22%5D%22\n %0A        pul\n@@ -532,12 +532,8 @@\n  = %22\n-%5B%22 +\n  %22.j\n@@ -573,15 +573,8 @@\n ng%5D)\n-%22 + %22%5D%22\n %0A   \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_17-51-52",
+            "content": "@@ -469,18 +469,16 @@\n do = %22%5B%22\n- %22\n  %22.join(\n@@ -506,24 +506,25 @@\n .__waiting%5D)\n+%22\n  + %22%5D%22%0A     \n@@ -541,18 +541,16 @@\n  = %22%5B%22 +\n- %22\n  %22.join(\n@@ -582,16 +582,17 @@\n laying%5D)\n+%22\n  + %22%5D%22%0A \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_17-52-35",
+            "content": "@@ -461,24 +461,28 @@\n  esperando =\n+ %22%5B%22\n  %22 %22.join(%5Bs\n@@ -512,16 +512,22 @@\n aiting%5D)\n+ + %22%5D%22\n %0A       \n@@ -536,16 +536,22 @@\n ulando =\n+ %22%5B%22 +\n  %22 %22.joi\n@@ -586,16 +586,21 @@\n aying%5D) \n++ %22%5D%22\n %0A       \n@@ -609,17 +609,16 @@\n eturn f%22\n-%5B\n %7Besperan\n@@ -624,14 +624,12 @@\n ndo%7D\n-%5D\n  =%3E \n-%5B\n %7Bpul\n@@ -633,17 +633,16 @@\n pulando%7D\n-%5D\n %22%0A    %0A \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_17-53-27",
+            "content": "@@ -467,17 +467,16 @@\n ando = %22\n-,\n  %22.join(\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_17-53-44",
+            "content": "@@ -699,88 +699,8 @@\n d)%0A%0A\n-    def enter(self):%0A        self.__playing.insert(self.__waiting.pop(0))%0A    %0A%0A\n     \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_18-01-51",
+            "content": "@@ -765,47 +765,20 @@\n ing.\n-index%5B0%5D)%0A        self.__waiting.\n pop(0)\n+)%0A    \n %0A%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-19_18-02-21",
+            "content": "@@ -1292,71 +1292,8 @@\n kid)\n-%0A        elif arg%5B0%5D == %22enter%22:%0A            trampoline.enter()\n %0A%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-19_18-03-01",
+            "content": "@@ -708,32 +708,87 @@\n ef enter(self):%0A\n+        self.__playing.insert(self.__waiting.index%5B0%5D)%0A\n         self.__w\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-11-19_18-03-34",
+            "content": "@@ -742,16 +742,19 @@\n ting.pop\n+(0)\n %0A%0A    de\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_18-04-02",
+            "content": "@@ -742,18 +742,16 @@\n ting.pop\n-()\n %0A%0A    de\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_18-04-44",
+            "content": "@@ -727,33 +727,8 @@\n     \n- self.__playing.insert(0,\n  sel\n@@ -744,17 +744,16 @@\n ng.pop()\n-)\n %0A%0A    de\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_18-05-55",
+            "content": "@@ -521,33 +521,32 @@\n      pulando = %22\n-,\n  %22.join(%5Bstr(x) \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_18-06-13",
+            "content": "@@ -777,85 +777,8 @@\n ))%0A%0A\n-    def leave(self):%0A        self.__waiting.insert(0, self.__playing.pop())%0A%0A\n     \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_18-09-31",
+            "content": "@@ -1404,70 +1404,8 @@\n r()%0A\n-        elif arg%5B0%5D == %22leave%22:%0A            trampoline.leave()\n %0A   \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-19_18-10-03",
+            "content": "@@ -854,273 +854,8 @@\n ))%0A%0A\n-    def remove(self, nome:str):%0A        for kid in self.__playing:%0A            if kid.getName() == nome:%0A                self.__playing.remove(kid)%0A        for kid in self.__waiting:%0A            if kid.getName() == nome:%0A                self.__waiting.remove(kid)%0A%0A\n     \n@@ -1467,72 +1467,8 @@\n e()%0A\n-        elif arg%5B0%5D == %22remove%22:%0A            trampoline.leave()%0A\n     \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-19_18-14-18",
+            "content": "@@ -1765,38 +1765,8 @@\n e%22:%0A\n-            nome:str = arg%5B1%5D%0A\n     \n@@ -1790,20 +1790,16 @@\n e.leave(\n-nome\n )%0A    %0Am\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-11-19_18-14-51",
+            "content": "@@ -1814,20 +1814,19 @@\n mpoline.\n-remo\n+lea\n ve(nome)\n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-11-19_18-15-23",
+            "content": "@@ -798,63 +798,8 @@\n f):%0A\n-        if self.__playing == None:%0A            return %0A\n     \n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-11-19_18-16-36",
+            "content": "@@ -861,35 +861,8 @@\n     \n-%0A        else:%0A            \n self\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-11-19_18-17-02",
+            "content": "@@ -848,20 +848,16 @@\n  return \n-None\n %0A       \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-19_18-19-57",
+            "content": "@@ -852,10 +852,12 @@\n urn \n-%22%22\n+None\n %0A   \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-19_18-20-08",
+            "content": "@@ -823,18 +823,20 @@\n ying == \n-%5B%5D\n+None\n :%0A      \n@@ -848,16 +848,18 @@\n  return \n+%22%22\n %0A       \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-19_18-21-12",
+            "content": "@@ -1082,99 +1082,8 @@\n id)%0A\n-            else:%0A                return f%22fail %7Bnome%7D nao esta no pula-pula%22%0A            %0A\n     \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-19_18-27-18",
+            "content": "@@ -966,114 +966,8 @@\n r):%0A\n-        if kid.getName() not in self.__playing:%0A            print(%22fail:%22 + nome %22nao esta no pula-pula%22)%0A\n     \n@@ -1079,24 +1079,109 @@\n e(kid)%0A     \n+       else:%0A                return f%22fail %7Bnome%7D nao esta no pula-pula%22%0A            \n %0A        for\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-34-46",
+            "content": "@@ -1026,29 +1026,30 @@\n     \n-return f\n+print(\n %22fail:\n-%7B\n+%22 + \n nome\n-%7D\n  \n+%22\n nao \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-35-30",
+            "content": "@@ -1065,16 +1065,17 @@\n la-pula%22\n+)\n %0A       \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-35-40",
+            "content": "@@ -966,47 +966,8 @@\n r):%0A\n-        for kid in self.__playing:%0A    \n     \n@@ -1002,36 +1002,32 @@\n self.__playing:%0A\n-    \n             retu\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-36-51",
+            "content": "@@ -1069,29 +1069,29 @@\n     \n-print(\n+return f\n %22fail:\n-%22\n %7Bnome%7D \n-%22\n nao \n@@ -1108,17 +1108,16 @@\n la-pula%22\n-)\n %0A       \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-19_18-37-55",
+            "content": "@@ -1078,22 +1078,23 @@\n (%22fail:%22\n-(\n+%7B\n nome\n-)\n+%7D \n %22nao est\n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-19_18-38-09",
+            "content": "@@ -974,15 +974,63 @@\n     \n-if nome\n+for kid in self.__playing:%0A            if kid.getName()\n  not\n@@ -1065,30 +1065,32 @@\n     \n-return f\n+    print(\n %22fail:\n- %7B\n+%22(\n nome\n-%7D \n+)%22\n nao \n@@ -1107,16 +1107,17 @@\n la-pula%22\n+)\n %0A       \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-19_18-41-09",
+            "content": "@@ -966,47 +966,8 @@\n r):%0A\n-        for kid in self.__playing:%0A    \n     \n@@ -1009,28 +1009,24 @@\n             \n-    \n return f%22fai\n@@ -1066,22 +1066,55 @@\n         \n+for kid in self.__playing:%0A        \n     \n-el\n if kid.g\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-42-45",
+            "content": "@@ -974,19 +974,15 @@\n     \n-if nome not\n+for kid\n  in \n@@ -999,12 +999,24 @@\n ying\n- and\n+:%0A            if\n  nom\n@@ -1023,36 +1023,36 @@\n e not in self.__\n-wait\n+play\n ing:%0A           \n@@ -1044,32 +1044,36 @@\n ng:%0A            \n+  \n+  \n return f%22fail: %7B\n@@ -1113,47 +1113,14 @@\n     \n-for kid in self.__playing:%0A        \n     \n+el\n if k\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-45-14",
+            "content": "@@ -1000,18 +1000,19 @@\n playing \n-or\n+and\n  nome no\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-45-45",
+            "content": "@@ -962,32 +962,149 @@\n e:str):%0A        \n+if nome not in self.__playing or nome not in self.__waiting:%0A            return f%22fail: %7Bnome%7D nao esta no pula-pula%22\n %0A        for kid\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-47-06",
+            "content": "@@ -933,344 +933,49 @@\n ())%0A\n-    %0A    def isPulando(self,nome:str):%0A        for kid in self.__playing:%0A            if kid.getName() != nome:%0A                return False%0A            else:%0A                return True%0A            %0A    def remove(self, nome:str):%0A        %0A        if self.isPulando() == False:%0A            print(f%22fail: %7Bnome%7D nao esta no pula-pula%22)%0A\n+%0A    def remove(self, nome:str):%0A        \n %0A   \n@@ -1092,23 +1092,16 @@\n d)%0A     \n-       \n %0A       \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-11-19_18-53-02",
+            "content": "@@ -937,43 +937,340 @@\n     \n-   %0A    def remove(self, nome:str):\n+%0A    def isPulando(self,nome:str):%0A        for kid in self.__playing:%0A            if kid.getName() != nome:%0A                return False%0A            else:%0A                return True%0A            %0A    def remove(self, nome:str):%0A        %0A        if self.isPulando() == False:%0A            print(f%22fail: %7Bnome%7D nao esta no pula-pula%22)%0A\n %0A   \n@@ -1514,69 +1514,8 @@\n kid)\n-%0A        %0A        return f%22fail:%7Bnome%7D nao esta no pula pula%22\n %0A%0A  \n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-11-19_18-56-20",
+            "content": "@@ -1231,22 +1231,23 @@\n         \n-print(\n+return \n f%22fail:%7B\n@@ -1274,17 +1274,16 @@\n la pula%22\n-)\n %0A%0A    de\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-56-45",
+            "content": "@@ -1274,32 +1274,16 @@\n a pula%22)\n-%0A        return \n %0A%0A    de\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_18-58-24",
+            "content": "@@ -1089,32 +1089,8 @@\n id)%0A\n-                return %0A\n     \n@@ -1226,36 +1226,8 @@\n     \n-        return %0A            \n %0A   \n@@ -1283,16 +1283,23 @@\n         \n+return \n %0A%0A    de\n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-19_19-00-36",
+            "content": "@@ -1296,17 +1296,16 @@\n (f%22fail:\n- \n %7Bnome%7D n\n",
+            "lines": "83"
+        },
+        {
+            "label": "2025-11-19_19-01-01",
+            "content": "@@ -1324,9 +1324,9 @@\n pula\n--\n+ \n pula\n",
+            "lines": "83"
+        },
+        {
+            "label": "2025-11-19_19-01-14",
+            "content": "class Kid:\n\n    def __init__(self, name:str, age: int):\n        self.__name: str = name\n        self.__age: int = age\n\n    def __str__(self):\n        return f\"{self.__name}:{self.__age}\"\n    \n    def getName(self):\n        return self.__name\n    \n    def getAge(self):\n        return self.__age\n    \nclass Trampoline:\n\n    def __init__(self):\n        self.__playing:list[Kid|None] = []\n        self.__waiting:list[Kid|None] = []\n\n    def __str__(self):\n        esperando = \", \".join([str(x) for x in self.__waiting])\n        pulando = \", \".join([str(x) for x in self.__playing]) \n        return f\"[{esperando}] => [{pulando}]\"\n    \n    def arrive(self, kid: Kid):\n        self.__waiting.insert(0, kid)\n\n    def enter(self):\n        self.__playing.insert(0, self.__waiting.pop())\n\n    def leave(self):\n        if self.__playing == []:\n            return \n        \n        else:\n            self.__waiting.insert(0, self.__playing.pop())\n       \n    def remove(self, nome:str):\n        for kid in self.__playing:\n            if kid.getName() == nome:\n                self.__playing.remove(kid)\n                return \n            \n        for kid in self.__waiting:\n            if kid.getName() == nome:\n                self.__waiting.remove(kid)\n                return \n            \n        print(f\"fail: {nome} nao esta no pula-pula\")\n        \n\n    def show(self):\n        print(self)\n\ndef main():\n    kid = Kid(\" \", 0)\n    trampoline = Trampoline()\n\n    while True:\n        linha = input()\n        arg:list[str] = linha.split(\" \")\n        print(\"$\" + linha)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"show\":\n            trampoline.show()\n        elif arg[0] == \"arrive\":\n            name:str = arg[1]\n            age:int = int(arg[2])\n            kid = Kid(name, age)\n            trampoline.arrive(kid)\n        elif arg[0] == \"enter\":\n            trampoline.enter()\n        elif arg[0] == \"leave\":\n            trampoline.leave()\n        elif arg[0] == \"remove\":\n            nome:str = arg[1]\n            trampoline.remove(nome)\n    \nmain()",
+            "lines": "83"
+        }
+    ]
+}

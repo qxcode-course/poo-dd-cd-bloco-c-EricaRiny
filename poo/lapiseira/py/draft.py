@@ -74,7 +74,6 @@ class Pencil:
             print("fail: tamanho insuficiente")
             self.__bico = None
             
-
 def main():
     lead = Lead(0," ", 0)
     pencil = Pencil(0)
