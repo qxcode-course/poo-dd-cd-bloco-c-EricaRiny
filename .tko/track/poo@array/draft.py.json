@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-19_20-49-37",
+            "content": "@@ -1,345 +0,0 @@\n-class teste:%0A%0A    def __init__(self, x: int):%0A        self.x = x%0A    %0A    def __str__(self):%0A        return f%22teste(%7Bself.x%7D)%22%0A    %0Alista_vazia: list%5Bint%5D = %5B%5D%0Alista_preenchida: list%5Bint%5D = %5B3, 4, 1, 10%5D%0Alista_obj: list%5Bteste%5D = %5Bteste(1), teste(9), teste(10)%5D%0A%0Alista_vazia.append(9)%0Alista_preenchida.append(teste(3))%0Atamanho = len(lista_vazia)%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-11-19_21-01-10",
+            "content": "class teste:\n\n    def __init__(self, x: int):\n        self.x = x\n    \n    def __str__(self):\n        return f\"teste({self.x})\"\n    \nlista_vazia: list[int] = []\nlista_preenchida: list[int] = [3, 4, 1, 10]\nlista_obj: list[teste] = [teste(1), teste(9), teste(10)]\n\nlista_vazia.append(9)\nlista_preenchida.append(teste(3))\ntamanho = len(lista_vazia)\n",
+            "lines": "15"
+        }
+    ]
+}
